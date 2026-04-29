@@ -51,6 +51,7 @@ El sistema implementa **autenticación basada en JWT**, asegurando que cada usua
 
 ## 🧱 Estructura del Proyecto
 
+```
 sistema-citas/
 │
 ├── backend/
@@ -67,6 +68,7 @@ sistema-citas/
 ├── api/
 ├── App.jsx
 └── package.json
+```
 
 ---
 
@@ -171,8 +173,9 @@ Appointments
   "user": "ObjectId"
 }
 🎯 Objetivo del Proyecto
+```
 
-Este proyecto demuestra habilidades en:
+## Este proyecto demuestra habilidades en:
 
 ✅ Desarrollo Full Stack
 ✅ Arquitectura cliente-servidor
@@ -181,14 +184,14 @@ Este proyecto demuestra habilidades en:
 ✅ Manejo de bases de datos NoSQL
 ✅ Buenas prácticas de desarrollo
 
-📈 Mejoras Futuras
+## 📈 Mejoras Futuras
 Notificaciones
 Calendario visual
 Roles de usuario
 Reportes
 Integración con Google Calendar
 
-👤 Autor
+## 👤 Autor
 
 Nicolás Castaño Rodas
 Técnico en Análisis y Desarrollo de Software
