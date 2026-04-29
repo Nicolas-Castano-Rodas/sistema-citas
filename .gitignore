@@ -1,0 +1,128 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Build directories
+/dist/
+/build/
+/.next/
+/out/
+*.tsbuildinfo
+
+# Vite specific
+.vite/
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+
+# Backend build
+backend/dist/
+backend/build/
+
+# Logs
+logs/
+*.log
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Testing
+.coverage
+.pytest_cache/
+cypress/screenshots/
+cypress/videos/
+
+# Yarn
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Local development
+local.conf
+localhost.pem
+
+# Generated files
+generated/
+auto-generated/
+
+# Cache
+.cache/
+cache/
+
+# Miscellaneous
+*.zip
+*.tar.gz
+*.rar
+.venv/
+venv/
+env/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+dump.rdb
+
+# SSH Keys
+*.pem
+*.pub
+id_rsa*
+
+# Docker
+.dockerignore
+docker-compose.override.yml

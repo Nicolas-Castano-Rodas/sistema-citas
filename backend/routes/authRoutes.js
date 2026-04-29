@@ -1,0 +1,49 @@
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const User = require('../models/User');
+
+// Registro
+router.post('/register', async (req, res) => {
+    try {
+        const { name, email, password } = req.body;
+        let user = await User.findOne({ email });
+        if (user) return res.status(400).json({ message: 'El usuario ya existe' });
+
+        user = new User({ name, email, password });
+        await user.save();
+
+        res.status(201).json({ message: 'Usuario registrado exitosamente' });
+    } catch (error) {
+        // 1. Esto imprimirá el error completo en la consola de tu editor (VS Code)
+        console.error("Error detallado en el registro:", error); 
+        
+        // 2. Esto te enviará el mensaje exacto a Postman
+        res.status(500).json({ 
+            message: 'Error en el servidor', 
+            detalle: error.message 
+        });
+    }
+});
+
+// Login
+router.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await User.findOne({ email });
+        if (!user) return res.status(400).json({ message: 'Credenciales inválidas' });
+
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.status(400).json({ message: 'Credenciales inválidas' });
+
+        const payload = { user: { id: user.id } };
+        const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+        res.json({ token });
+    } catch (error) {
+        res.status(500).json({ message: 'Error en el servidor' });
+    }
+});
+
+module.exports = router;
