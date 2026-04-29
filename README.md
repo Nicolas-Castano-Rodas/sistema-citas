@@ -172,10 +172,12 @@ Appointments
   "time": "14:00",
   "user": "ObjectId"
 }
-🎯 Objetivo del Proyecto
 ```
 
-## Este proyecto demuestra habilidades en:
+## 🎯 Objetivo del Proyecto
+
+
+Este proyecto demuestra habilidades en:
 
 ✅ Desarrollo Full Stack
 ✅ Arquitectura cliente-servidor
