@@ -1,363 +1,196 @@
-# Sistema de Gestión de Citas 📅
+## 📅 Sistema de Gestión de Citas – Full Stack
 
-**Una solución profesional y moderna para la gestión de citas y agendamiento.**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white)
 
----
-
-## 📋 Descripción
-
-Sistema completo de gestión de citas diseñado para empresas y profesionales. Proporciona una interfaz moderna, segura y fácil de usar para agendar, visualizar y administrar citas de manera eficiente.
-
-### Características Principales
-
-✨ **Autenticación Segura**
-- Registro e inicio de sesión con encriptación de contraseñas
-- Tokens JWT para sesiones seguras
-- Validación de credenciales
-
-📅 **Gestión de Citas**
-- Crear nuevas citas con descripción, fecha y hora
-- Visualizar todas las citas agendadas
-- Editar citas existentes
-- Eliminar citas con confirmación
-
-🎨 **Interfaz Profesional**
-- Diseño responsivo y moderno
-- Tema oscuro/claro automático
-- Animaciones suaves y fluidas
-- Componentes UI consistentes
-
-🔐 **Seguridad**
-- Validación de datos en cliente y servidor
-- Autenticación en todas las rutas protegidas
-- Tokens JWT con expiración
-- Protección contra acceso no autorizado
-
-📱 **Responsive**
-- Compatible con dispositivos móviles
-- Tablet y escritorio optimizados
-- Interfaz adaptativa
+Aplicación full stack desarrollada con **Node.js, Express, MongoDB, React y JWT**, que permite a los usuarios registrarse, autenticarse y gestionar citas de manera segura e intuitiva.
 
 ---
 
-## 🏗️ Arquitectura
+## 🚀 Descripción General
 
-### Estructura del Proyecto
+Esta aplicación permite a los usuarios:
 
-```
-sistema-citas/
-├── backend/                      # API REST con Node.js
-│   ├── controllers/              # Lógica de negocio
-│   │   ├── authController.js    # Autenticación
-│   │   └── appointmentController.js
-│   ├── middleware/               # Middlewares de Express
-│   │   └── auth.js              # Validación de JWT
-│   ├── models/                   # Esquemas de MongoDB
-│   │   ├── User.js
-│   │   └── Appointment.js
-│   ├── routes/                   # Rutas API
-│   │   ├── authRoutes.js
-│   │   └── appointmentRoutes.js
-│   ├── server.js                # Punto de entrada
-│   └── package.json
-│
-└── frontend/                     # Aplicación React
-    ├── src/
-    │   ├── components/           # Componentes React
-    │   │   ├── Login.jsx
-    │   │   └── Dashboard.jsx
-    │   ├── api/
-    │   │   └── axios.js         # Configuración HTTP
-    │   ├── App.jsx
-    │   ├── App.css              # Estilos globales
-    │   ├── index.css            # Temas y variables
-    │   └── main.jsx
-    ├── tailwind.config.js       # Configuración Tailwind
-    ├── vite.config.js           # Configuración Vite
-    └── package.json
-```
+✅ Registrarse e iniciar sesión de forma segura  
+✅ Crear citas con fecha, hora y descripción  
+✅ Visualizar sus propias citas  
+✅ Editar y eliminar citas existentes  
+✅ Gestionar su información de manera protegida  
+✅ Interactuar con una interfaz moderna y responsive  
 
-### Stack Tecnológico
-
-**Backend**
-- **Node.js** - Runtime de JavaScript
-- **Express** - Framework web
-- **MongoDB** - Base de datos NoSQL
-- **Mongoose** - ODM para MongoDB
-- **JWT** - Autenticación segura
-- **bcryptjs** - Encriptación de contraseñas
-- **CORS** - Control de acceso
-
-**Frontend**
-- **React** - Librería UI
-- **Vite** - Bundler rápido
-- **Tailwind CSS** - Utilidades CSS
-- **Lucide Icons** - Iconos escalables
-- **Axios** - Cliente HTTP
-- **React Router** - Enrutamiento
+El sistema implementa **autenticación basada en JWT**, asegurando que cada usuario solo acceda a sus propios datos.
 
 ---
 
-## 🚀 Instalación y Configuración
-
-### Requisitos Previos
-
-- Node.js (v16 o superior)
-- MongoDB (local o en la nube)
-- npm o yarn
+## 🛠️ Tecnologías Utilizadas
 
 ### Backend
-
-1. **Clonar repositorio y navegar a la carpeta backend**
-   ```bash
-   cd backend
-   ```
-
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
-
-3. **Configurar variables de entorno**
-   Crear archivo `.env` en la raíz del backend:
-   ```env
-   PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/sistema-citas
-   JWT_SECRET=tu_clave_secreta_super_segura
-   NODE_ENV=development
-   ```
-
-4. **Ejecutar servidor**
-   ```bash
-   npm start
-   ```
-   El servidor estará disponible en `http://localhost:5000`
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- JSON Web Tokens (JWT)
+- bcryptjs
+- CORS
 
 ### Frontend
+- React
+- Vite
+- Tailwind CSS
+- Axios
+- React Router
 
-1. **Navegar a la carpeta frontend**
-   ```bash
-   cd frontend
-   ```
-
-2. **Instalar dependencias**
-   ```bash
-   npm install
-   ```
-
-3. **Configurar variables de entorno**
-   Crear archivo `.env` en la raíz del frontend:
-   ```env
-   VITE_API_URL=http://localhost:5000/api
-   ```
-
-4. **Ejecutar aplicación en desarrollo**
-   ```bash
-   npm run dev
-   ```
-   La aplicación estará disponible en `http://localhost:5173`
+### Herramientas
+- npm
+- Postman / Thunder Client
 
 ---
 
-## 📚 API Documentation
+## 🧱 Estructura del Proyecto
+
+sistema-citas/
+│
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── server.js
+│ └── package.json
+│
+└── frontend/
+├── src/
+├── components/
+├── api/
+├── App.jsx
+└── package.json
+
+---
+
+## 🔐 Autenticación y Seguridad
+
+### Flujo de Autenticación
+
+1. Registro con email y contraseña
+2. Encriptación con bcryptjs
+3. Generación de JWT
+4. Almacenamiento del token en el cliente
+5. Validación en cada petición protegida
+
+### Medidas de Seguridad
+
+✅ Contraseñas encriptadas  
+✅ Tokens JWT con expiración  
+✅ Validación de datos en servidor  
+✅ Protección de rutas  
+✅ Verificación de propiedad de citas  
+✅ Control de acceso mediante middleware  
+
+---
 
 ### Autenticación
 
-#### POST `/api/auth/login`
-Inicio de sesión
-```json
+POST /api/auth/register
+POST /api/auth/login
+
+
+### Citas (requiere token)
+
+
+GET /api/appointments
+POST /api/appointments
+PUT /api/appointments/:id
+DELETE /api/appointments/:id
+
+
+---
+
+## ✅ Funcionalidades
+
+- [x] Registro de usuarios
+- [x] Login con JWT
+- [x] CRUD de citas
+- [x] Protección de rutas
+- [x] Validación de datos
+- [x] Interfaz responsive
+- [x] Manejo de errores
+
+---
+
+## 🎨 Interfaz de Usuario
+
+Desarrollada con **Tailwind CSS**, incluye:
+
+- Diseño responsive (mobile, tablet, desktop)
+- UI moderna y limpia
+- Formularios validados
+- Navegación intuitiva
+- Componentes reutilizables
+
+---
+
+
+### 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/Nicolas-Castano-Rodas/sistema-citas.git
+cd sistema-citas
+2️⃣ Backend
+cd backend
+npm install
+
+Crear .env:
+
+PORT=5000
+MONGODB_URI=tu_uri
+JWT_SECRET=tu_clave
+npm start
+3️⃣ Frontend
+cd frontend
+npm install
+npm run dev
+🗄️ Base de Datos
+Colecciones
+
+Users
+
 {
-  "email": "usuario@empresa.com",
-  "password": "contraseña"
+  "email": "usuario@email.com",
+  "password": "hash"
 }
-```
-**Respuesta:**
-```json
+
+Appointments
+
 {
-  "token": "eyJhbGc..."
+  "description": "Reunión",
+  "date": "2026-04-29",
+  "time": "14:00",
+  "user": "ObjectId"
 }
-```
+🎯 Objetivo del Proyecto
 
-#### POST `/api/auth/register`
-Registro de nuevo usuario
-```json
-{
-  "email": "usuario@empresa.com",
-  "password": "contraseña"
-}
-```
+Este proyecto demuestra habilidades en:
 
-### Citas
+✅ Desarrollo Full Stack
+✅ Arquitectura cliente-servidor
+✅ APIs REST
+✅ Autenticación segura con JWT
+✅ Manejo de bases de datos NoSQL
+✅ Buenas prácticas de desarrollo
 
-#### GET `/api/appointments`
-Obtener todas las citas del usuario (requiere autenticación)
+📈 Mejoras Futuras
+Notificaciones
+Calendario visual
+Roles de usuario
+Reportes
+Integración con Google Calendar
 
-**Headers:**
-```
-Authorization: Bearer {token}
-```
+👤 Autor
 
-#### POST `/api/appointments`
-Crear nueva cita
-```json
-{
-  "description": "Reunión con cliente",
-  "date": "2024-05-15",
-  "time": "14:30"
-}
-```
-
-#### PUT `/api/appointments/:id`
-Actualizar cita
-```json
-{
-  "description": "Reunión actualizada",
-  "date": "2024-05-16",
-  "time": "15:00"
-}
-```
-
-#### DELETE `/api/appointments/:id`
-Eliminar cita
-
----
-
-## 🎨 Customización de Estilos
-
-### Variables CSS
-
-Las variables CSS se encuentran en `frontend/src/index.css`:
-
-```css
-:root {
-  --primary: #3b82f6;        /* Azul principal */
-  --secondary: #4f46e5;      /* Índigo secundario */
-  --success: #10b981;        /* Verde para éxito */
-  --error: #ef4444;          /* Rojo para errores */
-  --warning: #f59e0b;        /* Ámbar para advertencias */
-  --info: #0891b2;           /* Cian para información */
-}
-```
-
-### Tailwind CSS
-
-Personalizar temas en `frontend/tailwind.config.js`:
-
-```javascript
-export default {
-  theme: {
-    extend: {
-      colors: {
-        primary: '#3b82f6',
-        // Agregar más colores según sea necesario
-      }
-    }
-  }
-}
-```
-
----
-
-## 🔄 Flujo de Trabajo
-
-### Autenticación
-1. Usuario accede a `/login`
-2. Ingresa credenciales
-3. Backend valida y retorna JWT
-4. Token se almacena en localStorage
-5. Axios interceptor añade token a cada petición
-
-### Gestión de Citas
-1. Usuario autenticado accede a Dashboard
-2. Visualiza sus citas agendadas
-3. Puede crear nueva cita con formulario
-4. Puede editar o eliminar citas existentes
-5. Backend valida propiedad de cita antes de modificar
-
----
-
-## 🛡️ Medidas de Seguridad
-
-- ✅ Contraseñas encriptadas con bcryptjs
-- ✅ Tokens JWT con tiempo de expiración
-- ✅ Validación de datos en servidor
-- ✅ CORS configurado apropiadamente
-- ✅ Protección contra acceso no autorizado
-- ✅ Validación de propiedad de recursos
-
----
-
-## 🐛 Solución de Problemas
-
-### "Error de conexión"
-- Verificar que MongoDB está ejecutándose
-- Validar URL de MONGODB_URI en .env
-- Confirmar que el servidor está activo
-
-### "Token expirado"
-- Se cierra sesión automáticamente
-- Redirige a página de login
-- Ingresar credenciales nuevamente
-
-### "No se carga el frontend"
-- Verificar que Vite está ejecutándose
-- Confirmar puerto 5173 disponible
-- Limpiar cache del navegador
-
----
-
-## 📈 Mejoras Futuras
-
-- [ ] Notificaciones por email
-- [ ] Recordatorios de citas
-- [ ] Exportar citas a PDF/iCal
-- [ ] Calendario visual interactivo
-- [ ] Roles de usuario (admin, usuario)
-- [ ] Panel de administración
-- [ ] Análisis y reportes
-- [ ] Integración con calendarios (Google, Outlook)
-- [ ] Búsqueda y filtrado avanzado
-- [ ] Múltiples idiomas
-
----
-
-## 📝 Licencia
-
-Este proyecto está bajo licencia ISC.
-
----
-
-## 👥 Autor
-
-Desarrollado como solución profesional de gestión de citas.
-
----
-
-## 📞 Soporte
-
-Para reportar problemas o sugerencias, contactar a soporte.
-
----
-
-**Última actualización:** Abril 2026
-
----
-
-### 🎯 Próximos pasos
-
-1. **Desarrollo**
-   ```bash
-   npm run dev  # Frontend
-   npm start    # Backend
-   ```
-
-2. **Build para producción**
-   ```bash
-   npm run build  # Frontend
-   ```
-
-3. **Deployment**
-   - Frontend: Vercel, Netlify o similar
-   - Backend: Heroku, AWS, DigitalOcean o similar
-
-¡Gracias por usar el Sistema de Gestión de Citas! 🙏
+Nicolás Castaño Rodas
+Técnico en Análisis y Desarrollo de Software
+📧 rodascastanonicolas@gmail.com
+🐙 https://github.com/Nicolas-Castano-Rodas
